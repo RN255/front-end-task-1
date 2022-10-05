@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <section id="banner">
+      <img id="logo" src="logo.JPEG" alt="logo" />
+    </section>
+
+    <section id="apply">
+      <h2>Apply for a loan now &#x1F44D</h2>
+      <div id="error"></div>
+
+      <form action="/" id="form" method="post" name="form" onsubmit="return validateForm()">
+
+        <label for="loanAmount">Loan amount</label>
+        <div id="LoanAmountWarning"></div>
+        <input type="text" id="loanAmount" name="loanAmount" placeholder="£"/>
+
+        <label>Loan term (months)</label>
+        <div id="LoanTermWarning"></div>
+        <div class="LoanTermRadio">
+
+            <input type="radio" id="12" name="loanTerm"  value="12">
+            <label for="12">12</label>
+            <input type="radio" id="18" name="loanTerm"  value="18">
+            <label for="18">18</label>
+            <input type="radio" id="24" name="loanTerm"  value="12">
+            <label for="24">24</label>
+
+        </div>
+
+        <button id="submit" type="submit">submit</button>
+
+      </form>
+      
+    </section>
+    <script>
+        function validateForm() {
+            let x = document.forms["form"]["loanAmount"].value;
+            let y = document.forms["form"]["loanTerm"].value;
+            
+            if (x == "" && y == false) {
+                document.getElementById("LoanAmountWarning").innerHTML = "Please enter a number";
+                document.getElementById("LoanTermWarning").innerHTML = "Please choose a loan term";
+                return false;
+            } else if ((isNaN(x)) && y == false) {
+                document.getElementById("LoanAmountWarning").innerHTML = "Please enter only numbers";
+                document.getElementById("LoanTermWarning").innerHTML = "Please choose a loan term";
+                return false;
+            } else if (x == "") {
+                document.getElementById("LoanAmountWarning").innerHTML = "Please enter a number";
+                document.getElementById("LoanTermWarning").innerHTML = "";
+                return false;
+            } else if (isNaN(x)) {
+                document.getElementById("LoanAmountWarning").innerHTML = "Please enter only numbers";
+                document.getElementById("LoanTermWarning").innerHTML = "";
+                return false;
+            } else if (y == false) {
+                document.getElementById("LoanAmountWarning").innerHTML = "";
+                document.getElementById("LoanTermWarning").innerHTML = "Please choose a loan term";
+                return false;
+            }           
+          }
+
+    </script>
+
+  </body>
+
+</html>
