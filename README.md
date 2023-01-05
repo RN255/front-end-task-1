@@ -1,6 +1,13 @@
 ## Project Name: Loan application Front End Test
 This is a front end for a loan application. Users can type in a desired loan amount and select the repayment period.
 
+## How to use
+Website is live at: https://rn255.github.io/front-end-task-1/
+
+## Screenshot
+![loan app screenshot](https://github.com/RN255/front-end-task-1/blob/main/loanAppScreenshot.jpg)
+
+
 ## Motivation
 This project was part of a job application. I was given a sample of a web page and I had to re-create it myself.
 
@@ -23,9 +30,3 @@ This project was part of a job application. I was given a sample of a web page a
 ## future development
 - It could be expanded to have other sections and pages, maybe a screen telling the user what they have asked for.
 - The logo is just a picture I have, it could be changed to another logo, some text or a png file.
-
-## How to use
-Website is live at: https://rn255.github.io/front-end-task-1/
-
-## Screenshot
-![loan app screenshot](https://github.com/RN255/front-end-task-1/blob/main/loanAppScreenshot.jpg)
